@@ -1,24 +1,21 @@
 <script>
-
+import GlassCard from '@/components/GlassCard'
 export default {
   name: 'App',
   components: {
-    
+    GlassCard
   }
 }
 </script>
 
 <template>
-  <h1>Hello NiGGA$$</h1>
+  <glass-card/>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  body {
+    background: linear-gradient(#161623, #FF008E);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
 </style>

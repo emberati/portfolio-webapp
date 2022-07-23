@@ -1,0 +1,74 @@
+@font-face {
+  font-family: 'socials';
+  src:  url('../fonts/Socials/socials.eot?');
+  src:  url('../fonts/Socials/socials.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Socials/socials.ttf?') format('truetype'),
+    url('../fonts/Socials/socials.woff?') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'socials' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.github-bordered:before {
+  content: "\e900";
+}
+.github-clear:before {
+  content: "\e901";
+}
+.github-framed:before {
+  content: "\e902";
+}
+.instagram-bordered:before {
+  content: "\e903";
+}
+.instagram-clear:before {
+  content: "\e904";
+}
+.instagram-framed:before {
+  content: "\e905";
+}
+.telegram-bordered:before {
+  content: "\e906";
+}
+.telegram-clear:before {
+  content: "\e907";
+}
+.telegram-framed:before {
+  content: "\e908";
+}
+.vkontakte-bordered:before {
+  content: "\e909";
+}
+.vkontakte-clear:before {
+  content: "\e90a";
+}
+.vkontakte-framed:before {
+  content: "\e90b";
+}
+.youtube-bordered:before {
+  content: "\e90c";
+}
+.youtube-clear:before {
+  content: "\e90d";
+}
+.youtube-framed:before {
+  content: "\e90e";
+}
+.youtube:before {
+  content: "\ea9d";
+}

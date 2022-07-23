@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 p, a, span, i, label, button, input, li {
     font-family: 'Montserrat';
     font-weight: 300;
