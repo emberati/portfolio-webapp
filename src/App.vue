@@ -14,7 +14,7 @@ export default {
 
 <style>
   body {
-    background: linear-gradient(#161623, #FF008E);
+    background: linear-gradient(#000340, #D20097);
     background-repeat: no-repeat;
     background-attachment: fixed;
   }

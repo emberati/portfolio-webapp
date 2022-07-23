@@ -3,7 +3,7 @@
 }
 
 p, a, span, i, label, button, input, li {
-    font-family: 'Montserrat';
+    font-family: 'Prompt';
     font-weight: 300;
     font-size: 12px;
     text-decoration: none;
@@ -11,7 +11,7 @@ p, a, span, i, label, button, input, li {
 }
 
 h1, h2, h3 {
-    font-family: 'Minecraft';
+    font-family: 'Prompt';
     color: var(--color-main-font);
     padding-bottom: 20px;
 }

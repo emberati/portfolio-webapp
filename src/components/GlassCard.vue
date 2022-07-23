@@ -8,6 +8,9 @@ export default {
   components: {
     ProfileIcon
   },
+  props: {
+
+  },
   data: () => ({
     imageUrl: require('@/assets/img/profile.png')
   }),
@@ -26,12 +29,16 @@ export default {
 <template>
 <div class="glass-card" ref="card">
   <div class="glass-card-content">
-    <profile-icon :url="imageUrl" :size="128"/>
-    <h2>01</h2>
-    <h3>Card One</h3>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+    <div class="description headline">
+      <profile-icon id="visit-card-icon" :url="imageUrl" :size="128"/>
+      <h2 id="visit-card-name">Alexander Shakailo</h2>
+      <p id="visit-card-postion">fullstack developer</p>
+    </div>
+    <div class="description contacts">
+      <a id="visit-card-email" href="mailto:emberati@gmail.com">emberati@gmail.com</a>
+      <a id="visit-card-phone" href="tel:79805323361">+7 (980) 532-33 61</a>
+      <p id="visit-card-netname">@emberati</p>
+    </div>
     <div class="socials">
       <a href="#"><span class="icon telegram-framed"></span></a>
       <a href="#"><span class="icon vkontakte-framed"></span></a>
@@ -50,9 +57,6 @@ export default {
   height: 400px;
   margin: 30px;
 
-  justify-content: center;
-  align-items: center;
-
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
 
@@ -70,6 +74,37 @@ export default {
   padding: 30px;
 }
 
+.description * {
+  text-align: center;
+  color: white;
+  font-size: 16px;
+  margin: 0;
+}
+
+.description.contacts {
+  margin-top: auto;
+  display: inherit;
+}
+
+#visit-card-icon {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+#visit-card-name {
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+#visit-card-netname {
+  font-weight: 700;
+}
+
 .socials {
   margin-top: auto;
   display: flex;
@@ -84,6 +119,7 @@ export default {
   color: white;
   font-size: 40px;
   user-select: none;
+  -webkit-user-drag: none;
   transition: .1s ease;
 }
 
