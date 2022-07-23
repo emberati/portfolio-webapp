@@ -1,10 +1,17 @@
 <script>
+import ProfileIcon from '@/components/ProfileIcon'
+
 import tilt from 'vanilla-tilt'
 
 export default {
   name: 'glass-card',
+  components: {
+    ProfileIcon
+  },
+  data: () => ({
+    imageUrl: require('@/assets/img/profile.png')
+  }),
   mounted() {
-
     tilt.init(this.$refs.card, {
       reverse: true,
       max: 5,
@@ -19,6 +26,7 @@ export default {
 <template>
 <div class="glass-card" ref="card">
   <div class="glass-card-content">
+    <profile-icon :url="imageUrl" :size="128"/>
     <h2>01</h2>
     <h3>Card One</h3>
     <p>
@@ -45,7 +53,7 @@ export default {
   justify-content: center;
   align-items: center;
 
-  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
 
   border-top: 1px solid rgba(255, 255, 255, 0.5);
@@ -59,7 +67,7 @@ export default {
 .glass-card-content {
   display: grid;
   height: 100%;
-  padding: 20px;
+  padding: 30px;
 }
 
 .socials {
