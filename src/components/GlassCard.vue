@@ -40,16 +40,17 @@ export default {
       <p id="visit-card-netname">@emberati</p>
     </div>
     <div class="socials">
-      <a href="#"><span class="icon telegram-framed"></span></a>
-      <a href="#"><span class="icon vkontakte-framed"></span></a>
-      <a href="#"><span class="icon instagram-framed"></span></a>
-      <a href="#"><span class="icon github-framed"></span></a>
+      <a href="#"><span class="icon telegram filled"></span></a>
+      <a href="#"><span class="icon vkontakte filled"></span></a>
+      <a href="#"><span class="icon instagram filled"></span></a>
+      <a href="#"><span class="icon github filled"></span></a>
     </div>
   </div>
 </div>
 </template>
 
 <style scoped>
+
 .glass-card {
   position: relative;
   overflow: hidden;
@@ -128,24 +129,24 @@ export default {
   box-shadow: 0 45px 20px 50px #22222220;
 }
 
-.icon.telegram-framed:hover {
+.icon.telegram:hover {
   color: #50A1DC;
   text-shadow: 0 45px 5px #50A1DCA2;
 }
 
-.icon.vkontakte-framed:hover {
+.icon.vkontakte:hover {
   color: #3375F6;
   text-shadow: 0 45px 5px #3375F6A2;
 }
 
-.icon.instagram-framed:hover {
+.icon.instagram:hover {
   background: linear-gradient(#7941CB, #F54F52, #FFD454);
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow: 0 45px 5px #F54F52A2;
 }
 
-.icon.github-framed:hover {
+.icon.github:hover {
   color: #222222;
   text-shadow: 0 45px 5px #222222A2;
 }

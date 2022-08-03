@@ -24,51 +24,57 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.github-bordered:before {
-  content: "\e900";
-}
-.github-clear:before {
+/* GITHUB */
+.github:before {
   content: "\e901";
 }
-.github-framed:before {
+.github.filled:before {
   content: "\e902";
 }
-.instagram-bordered:before {
-  content: "\e903";
+.github.outlined:before {
+  content: "\e900";
 }
-.instagram-clear:before {
+
+/* INSTAGRAM */
+.instagram:before {
   content: "\e904";
 }
-.instagram-framed:before {
+.instagram.filled:before {
   content: "\e905";
 }
-.telegram-bordered:before {
-  content: "\e906";
+.instagram.outlined:before {
+  content: "\e903";
 }
-.telegram-clear:before {
+
+/* TELEGRAM */
+.telegram:before {
   content: "\e907";
 }
-.telegram-framed:before {
+.telegram.filled:before {
   content: "\e908";
 }
-.vkontakte-bordered:before {
-  content: "\e909";
+.telegram.outlined:before {
+  content: "\e906";
 }
-.vkontakte-clear:before {
+
+/* VKONTAKTE */
+.vkontakte:before {
   content: "\e90a";
 }
-.vkontakte-framed:before {
+.vkontakte.filled:before {
   content: "\e90b";
 }
-.youtube-bordered:before {
-  content: "\e90c";
+.vkontakte.outlined:before {
+  content: "\e909";
 }
-.youtube-clear:before {
+
+/* YOUTUBE */
+.youtube:before {
   content: "\e90d";
 }
-.youtube-framed:before {
+.youtube.filled:before {
   content: "\e90e";
 }
-.youtube:before {
-  content: "\ea9d";
+.youtube.outlined:before {
+  content: "\e90c";
 }
