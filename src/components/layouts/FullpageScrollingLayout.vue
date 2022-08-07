@@ -16,6 +16,9 @@ export default {
     scrollpage: null
   }),
   methods: {},
+  setup() {
+    
+  },
   mounted() {
     this.scrollpage = init(this.$refs.scrollAreaElement, null, this.anchors)
 
@@ -31,23 +34,25 @@ export default {
     }
 
     
-
-    window.addEventListener('resize', this.verbose)
+    console.log('mounted')
   },
   unmounted() {
+    console.log('unmounted')
     window.removeEventListener('resize', this.verbose)
   }
 }
 </script>
 
 <template>
-  <div class="scrollpage-outer" ref="scrollAreaElement">
+  <div class="scrollpage-outer" ref="scrollAreaElement" tabindex="0">
     <div class="scrollpage-inner">
       <slot></slot>
     </div>
     <div class="btns">
-      <button @click="scrollpage.scrollBack">prev</button>
-      <button @click="scrollpage.scrollNext">next</button>
+      <button @click="scrollpage.backward">&lt;&lt;</button>
+      <button @click="scrollpage.back">prev</button>
+      <button @click="scrollpage.next">next</button>
+      <button @click="scrollpage.forward">&gt;&gt;</button>
     </div>
   </div>
 </template>
@@ -57,9 +62,11 @@ export default {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  outline: none;
 }
 
 .scrollpage-inner {
+  display: -webkit-inline-box;
   transition-property: transform;
   transition-timing-function: var(--timefunc);
   transition-duration: var(--duration);
@@ -78,4 +85,35 @@ export default {
   bottom: 10px;
   left: 10px;
 }
+
+.btns button {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  cursor: pointer;
+  outline: none;
+  border: 1px solid white;
+  border-right: none;
+
+  color: white;
+  background-color: transparent;
+}
+
+.btns button:hover {
+  background-color: white;
+  color: #f28482;
+  /* background-color: #fff; */
+}
+
+.btns button:first-child {
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+}
+
+.btns button:last-child {
+  border-right: 1px solid white;
+  border-radius: 0 5px 5px 0;
+}
+
 </style>

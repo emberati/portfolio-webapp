@@ -9,7 +9,7 @@ export default {
     FullpageScrollingLayout,
   },
   data: () => ({
-    anchors: ['author', 'test1', 'test2', 'test3'],
+    anchors: ['author', 'test1', 'test2', 'test3', 'test4', 'test5'],
   })
   
 }
@@ -18,9 +18,11 @@ export default {
 <template>
   <fullpage-scrolling-layout :anchors="anchors">
     <div class="section author"><glass-card/></div>
-    <div class="section t1">Test 1</div>
-    <div class="section t2">Test 2</div>
-    <div class="section t3">Test 3</div>
+    <div class="section t1"><h1>Test 1</h1></div>
+    <div class="section t2"><h1>Test 2</h1></div>
+    <div class="section t3"><h1>Test 3</h1></div>
+    <div class="section t4"><h1>Test 4</h1></div>
+    <div class="section t5"><h1>Test 5</h1></div>
   </fullpage-scrolling-layout>
 </template>
 
@@ -29,6 +31,17 @@ export default {
     background: linear-gradient(#000340, #D20097);
     background-repeat: no-repeat;
     background-attachment: fixed;
+  }
+
+  .section {
+    display: flex;
+  }
+
+  .section h1 {
+    color: white;
+    font-size: 64px;
+    text-align: center;
+    margin: auto;
   }
 
   .author {
@@ -46,5 +59,13 @@ export default {
 
   .t3 {
     background-color: #84a59d;
+  }
+
+  .t4 {
+    background-color: #f28482;
+  }
+
+  .t5 {
+    background-color: #f6bd60;
   }
 </style>
