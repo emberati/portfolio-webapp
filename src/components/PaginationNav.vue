@@ -13,12 +13,14 @@ export default {
   },
   methods: {
     navigate(anchor) {
-      console.log(anchor)
       this.$emit('changeView', anchor)
     },
   },
   mounted() {
     this.navigate(this.links[0].id)
+    this.links.forEach(element => {
+      console.log(element.id)
+    });
   },
 }
 </script>

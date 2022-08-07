@@ -1,26 +1,27 @@
 <script>
 import GlassCard from '@/components/GlassCard'
-import PaginationContainer from '@/components/containers/PaginationContainer'
+import FullpageScrollingLayout from './components/layouts/FullpageScrollingLayout.vue'
 
 export default {
   name: 'App',
   components: {
     GlassCard,
-    PaginationContainer,
+    FullpageScrollingLayout,
   },
+  data: () => ({
+    anchors: ['author', 'test1', 'test2', 'test3'],
+  })
   
 }
 </script>
 
 <template>
-  <pagination-container>
-      <template v-slot="paginationFunction">
-        <glass-card :class="'view'"/>
-        <h2 id="t1" class="t1 view" v-paginate="paginationFunction">Test 1</h2>
-        <h2 id="t2" class="t2 view" v-paginate="paginationFunction">Test 2</h2>
-        <h2 id="t3" class="t3 view" v-paginate="paginationFunction">Test 3</h2>
-      </template>
-  </pagination-container>
+  <fullpage-scrolling-layout :anchors="anchors">
+    <div class="section"><glass-card/></div>
+    <div class="section">Test 1</div>
+    <div class="section">Test 2</div>
+    <div class="section">Test 3</div>
+  </fullpage-scrolling-layout>
 </template>
 
 <style>
@@ -28,22 +29,5 @@ export default {
     background: linear-gradient(#000340, #D20097);
     background-repeat: no-repeat;
     background-attachment: fixed;
-  }
-  
-  [class^=t] {
-    height: 100vh;
-  }
-  .t1 {
-    background-color: white;
-    height: auto;
-  }
-
-  .t2 {
-    background-color: red;
-    height: 50vh;
-  }
-
-  .t3 {
-    background-color: purple;
   }
 </style>
