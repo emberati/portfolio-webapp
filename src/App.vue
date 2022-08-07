@@ -16,7 +16,7 @@ export default {
 </script>
 
 <template>
-  <fullpage-scrolling-layout :anchors="anchors">
+  <fullpage-scrolling-layout :anchors="anchors" :selector="'section'">
     <div class="section author"><glass-card/></div>
     <div class="section t1"><h1>Test 1</h1></div>
     <div class="section t2"><h1>Test 2</h1></div>

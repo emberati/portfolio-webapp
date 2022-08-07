@@ -20,8 +20,8 @@ export default {
     
   },
   mounted() {
-    this.scrollpage = init(this.$refs.scrollAreaElement, null, this.anchors)
-
+    this.scrollpage = init(this.$refs.scrollAreaElement, this.selector, this.anchors)
+    
     this.verbose = () => { /* eslint-disable */
       let el = this.scrollpage.current
       let w = Number.parseInt(el.width)
@@ -47,13 +47,14 @@ export default {
   <div class="scrollpage-outer" ref="scrollAreaElement" tabindex="0">
     <div class="scrollpage-inner">
       <slot></slot>
-    </div>
-    <div class="btns">
+      <div class="btns">
       <button @click="scrollpage.backward">&lt;&lt;</button>
       <button @click="scrollpage.back">prev</button>
       <button @click="scrollpage.next">next</button>
       <button @click="scrollpage.forward">&gt;&gt;</button>
     </div>
+    </div>
+    
   </div>
 </template>
 
