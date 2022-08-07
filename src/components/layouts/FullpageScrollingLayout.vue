@@ -24,11 +24,15 @@ export default {
       let w = Number.parseInt(el.width)
       let h = Number.parseInt(el.height)
 
-      console.log(
-        el.anchor,
-        `${w}x${h}`
-      )
+      // console.log(
+        // el.anchor,
+        // `${w}x${h}`
+      // )
+
+      this.scrollpage.scroll(3)
     }
+
+    
 
     window.addEventListener('resize', this.verbose)
   },
@@ -39,16 +43,27 @@ export default {
 </script>
 
 <template>
-  <div class="fullpage-scrolling-layout" ref="scrollAreaElement">
-    <slot></slot>
+  <div class="scrollpage-outer" ref="scrollAreaElement">
+    <div class="scrollpage-inner">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
 <style>
-.fullpage-scrolling-layout {
+.scrollpage-outer {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+}
+
+.scrollpage-inner {
+  transition-property: transform;
+  transition-timing-function: var(--timefunc);
+  transition-duration: var(--duration);
+  transition-delay: var(--delay);
+  
+  transform: translate(var(--dx), var(--dy));
 }
 
 .view {
