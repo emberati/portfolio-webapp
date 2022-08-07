@@ -28,8 +28,6 @@ export default {
         // el.anchor,
         // `${w}x${h}`
       // )
-
-      this.scrollpage.scroll(2)
     }
 
     
@@ -46,8 +44,10 @@ export default {
   <div class="scrollpage-outer" ref="scrollAreaElement">
     <div class="scrollpage-inner">
       <slot></slot>
-      <!-- <button @click="scrollpage.scrollNext">prev</button> -->
-      <!-- <button @click="scrollpage.scrollBack">next</button> -->
+    </div>
+    <div class="btns">
+      <button @click="scrollpage.scrollBack">prev</button>
+      <button @click="scrollpage.scrollNext">next</button>
     </div>
   </div>
 </template>
@@ -71,5 +71,11 @@ export default {
 .view {
   height: 100vh;
   width: 100vw;
+}
+
+.btns {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
 }
 </style>
