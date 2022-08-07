@@ -126,7 +126,6 @@ export default {
 
 .icon:hover {
   margin-top: -5px;
-  box-shadow: 0 45px 20px 50px #22222220;
 }
 
 .icon.telegram:hover {
