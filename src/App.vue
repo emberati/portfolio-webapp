@@ -24,6 +24,7 @@ export default {
     <div class="section t4"><h1>Test 4</h1></div>
     <div class="section t5"><h1>Test 5</h1></div>
   </fullpage-scrolling-layout>
+  <div class="" style="height: 100vh; width:100vw;"></div>
 </template>
 
 <style>

@@ -47,18 +47,22 @@ export default {
   <div class="scrollpage-outer" ref="scrollAreaElement" tabindex="0">
     <div class="scrollpage-inner">
       <slot></slot>
-      <div class="btns">
+    </div>
+    <div class="btns">
       <button @click="scrollpage.backward">&lt;&lt;</button>
       <button @click="scrollpage.back">prev</button>
       <button @click="scrollpage.next">next</button>
       <button @click="scrollpage.forward">&gt;&gt;</button>
     </div>
-    </div>
-    
   </div>
 </template>
 
 <style>
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
 .scrollpage-outer {
   height: 100vh;
   width: 100vw;
