@@ -71,13 +71,20 @@ html {
 }
 
 .scrollpage-inner {
-  display: -webkit-inline-box;
+  /* display: -webkit-inline-box; */
   transition-property: transform;
   transition-timing-function: var(--timefunc);
   transition-duration: var(--duration);
   transition-delay: var(--delay);
   
   transform: translate(var(--dx), var(--dy));
+}
+
+.scrollpage-outer.touch .scrollpage-inner {
+  /* user-select: none; */
+  /* touch-action: none; */
+  transition: none!important;
+  /* transform: translate(var(--dx), var(--dy)); */
 }
 
 .view {
