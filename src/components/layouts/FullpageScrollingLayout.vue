@@ -61,6 +61,7 @@ export default {
 html {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
+  overflow: hidden;
 }
 
 .scrollpage-outer {
@@ -81,8 +82,8 @@ html {
 }
 
 .scrollpage-outer.touch .scrollpage-inner {
-  /* user-select: none; */
-  /* touch-action: none; */
+  user-select: none;
+  touch-action: none;
   transition: none!important;
   /* transform: translate(var(--dx), var(--dy)); */
 }
