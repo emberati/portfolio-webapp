@@ -87,6 +87,9 @@ html {
   /* transform: translate(var(--dx), var(--dy)); */
 }
 
+.scrollpage-outer.swipe .scrollpage-inner {
+  transition: .3s!important;
+}
 .view {
   height: 100vh;
   width: 100vw;
