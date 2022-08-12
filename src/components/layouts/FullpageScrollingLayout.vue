@@ -61,10 +61,11 @@ export default {
 html {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
-.scrollpage-outer {
+.scrollpage-outer, .view {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
@@ -85,18 +86,17 @@ html {
   user-select: none;
   touch-action: none;
   transition: none!important;
-  /* transform: translate(var(--dx), var(--dy)); */
 }
 
 .scrollpage-outer.swipe .scrollpage-inner {
   transition: .3s!important;
 }
 .view {
-  height: 100vh;
-  width: 100vw;
+  /* z-index: -1; */
 }
 
 .btns {
+  /* z-index: 1; */
   position: fixed;
   bottom: 10px;
   left: 10px;
