@@ -71,7 +71,7 @@ html {
 }
 
 .scrollpage-inner {
-  /* display: -webkit-inline-box; */
+  display: -webkit-inline-box;
   transition-property: transform;
   transition-timing-function: var(--timefunc);
   transition-duration: var(--duration);
