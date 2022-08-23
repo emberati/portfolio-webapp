@@ -1,15 +1,17 @@
 <script>
 import GlassCard from '@/components/GlassCard'
-import FullpageScrollingLayout from './components/layouts/FullpageScrollingLayout.vue'
+import FullpageScrollingLayout from '@/components/layouts/FullpageScrollingLayout.vue'
+import EyeSvg from '@/components/images/EyeSvg'
 
 export default {
   name: 'App',
   components: {
     GlassCard,
+    EyeSvg,
     FullpageScrollingLayout,
   },
   data: () => ({
-    anchors: ['author', 'test1', 'test2', 'test3', 'test4', 'test5'],
+    anchors: ['author', 'svgs', 'test1', 'test2', 'test3', 'test4', 'test5'],
   })
   
 }
@@ -18,6 +20,11 @@ export default {
 <template>
   <fullpage-scrolling-layout :anchors="anchors" :selector="'section'">
     <div class="section author"><glass-card/></div>
+    <div class="section svgs">
+      <div class="vision">
+        <eye-svg/><h1>Внимание <br/>к деталям</h1>
+      </div>
+    </div>
     <div class="section t1"><h1>Test 1</h1></div>
     <div class="section t2"><h1>Test 2</h1></div>
     <div class="section t3"><h1>Test 3</h1></div>
@@ -48,6 +55,31 @@ export default {
   .author {
     overflow: auto;
     background-color: #f28482;
+  }
+
+  .svgs {
+    display: flex;
+    background-color: black;
+  }
+  
+  .vision {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .vision>*{
+    margin: auto;
+  }
+
+  .vision svg {
+    margin-bottom: 0;
+  }
+
+  .vision h1 {
+    margin-top: 50px;
+    font-size: 24px;
+    font-family: sans-serif;
   }
 
   .t1 {
