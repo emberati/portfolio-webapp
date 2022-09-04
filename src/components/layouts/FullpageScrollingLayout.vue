@@ -21,24 +21,13 @@ export default {
   },
   mounted() {
     this.scrollpage = init(this.$refs.scrollAreaElement, this.selector, this.anchors)
-    
-    this.verbose = () => { /* eslint-disable */
-      let el = this.scrollpage.current
-      let w = Number.parseInt(el.width)
-      let h = Number.parseInt(el.height)
 
-      // console.log(
-        // el.anchor,
-        // `${w}x${h}`
-      // )
-    }
-
-    
     console.log('mounted')
   },
   unmounted() {
     console.log('unmounted')
     window.removeEventListener('resize', this.verbose)
+    this.scrollpage.destroy()
   }
 }
 </script>
