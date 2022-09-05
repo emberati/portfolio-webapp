@@ -17,7 +17,6 @@ export default {
   }),
   mounted() {
     this.scrollpage = init(this.$refs.scrollAreaElement, this.selector, this.anchors)
-    // console.log('ob3m3');c
     console.log('mounted')
   },
   unmounted() {
@@ -47,18 +46,32 @@ html {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: hidden; /* FIX THIS DEPENDENCY */
 }
 
 .scrollpage-outer {
   height: 100vh;
   width: 100vw;
+
+  height: 600px;
+  width: 800px;
+
+  overflow: hidden;
+  outline: none;
+}
+
+.view {
+  height: 100vh;
+  width: 100vw;
+
+  height: 600px;
+  width: 800px;
+
   overflow: hidden;
   outline: none;
 }
 
 .scrollpage-inner {
-  display: -webkit-inline-box;
   transition-property: transform;
   transition-timing-function: var(--timefunc);
   transition-duration: var(--duration);
@@ -75,11 +88,6 @@ html {
 
 .scrollpage-outer.swipe .scrollpage-inner {
   transition: .3s!important;
-}
-.view {
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
 }
 
 .btns {
