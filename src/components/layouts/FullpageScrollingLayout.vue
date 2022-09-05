@@ -15,13 +15,9 @@ export default {
   data: () => ({
     scrollpage: null
   }),
-  methods: {},
-  setup() {
-    
-  },
   mounted() {
     this.scrollpage = init(this.$refs.scrollAreaElement, this.selector, this.anchors)
-
+    // console.log('ob3m3');c
     console.log('mounted')
   },
   unmounted() {
@@ -54,7 +50,7 @@ html {
   overflow-y: auto;
 }
 
-.scrollpage-outer, .view {
+.scrollpage-outer {
   height: 100vh;
   width: 100vw;
   overflow: hidden;
@@ -81,7 +77,9 @@ html {
   transition: .3s!important;
 }
 .view {
-  /* z-index: -1; */
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .btns {
