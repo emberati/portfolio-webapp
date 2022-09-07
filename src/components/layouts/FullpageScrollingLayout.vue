@@ -46,23 +46,12 @@ html {
   overflow-y: hidden; /* FIX THIS DEPENDENCY */
 }
 
-.scrollpage-outer {
+.scrollpage-outer, .view {
   height: 100vh;
   width: 100vw;
 
-  height: 600px;
-  width: 800px;
-
-  overflow: hidden;
-  outline: none;
-}
-
-.view {
-  height: 100vh;
-  width: 100vw;
-
-  height: 600px;
-  width: 800px;
+  /* height: 600px; */
+  /* width: 800px; */
 
   overflow: hidden;
   outline: none;
