@@ -31,7 +31,7 @@ export default {
 </script>
 
 <template>
-  <div class="scrollpage-outer" ref="scrollAreaElement" tabindex="0">
+  <div class="scrollpage-outer" ref="scrollAreaElement">
     <div class="scrollpage-inner">
       <slot></slot>
     </div>

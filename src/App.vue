@@ -18,7 +18,7 @@ export default {
     flip() {
       // console.log(this.layout, this.layout.classList)
       this.layout.classList.toggle('landscape')
-      this.scrollpage.refresh()
+      this.scrollpage.redraw()
     }
   },
   mounted() {
