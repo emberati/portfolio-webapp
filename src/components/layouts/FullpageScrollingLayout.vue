@@ -15,6 +15,9 @@ export default {
   data: () => ({
     scrollpage: null
   }),
+  methods: {
+    next: () => {this.scrollpage.next()},
+  },
   mounted() {
     this.scrollpage = init(this.$refs.scrollAreaElement, this.selector, this.anchors)
     console.log('mounted')
@@ -31,12 +34,6 @@ export default {
   <div class="scrollpage-outer" ref="scrollAreaElement" tabindex="0">
     <div class="scrollpage-inner">
       <slot></slot>
-    </div>
-    <div class="btns">
-      <button @click="scrollpage.backward">&lt;&lt;</button>
-      <button @click="scrollpage.back">prev</button>
-      <button @click="scrollpage.next">next</button>
-      <button @click="scrollpage.forward">&gt;&gt;</button>
     </div>
   </div>
 </template>
@@ -88,43 +85,6 @@ html {
 
 .scrollpage-outer.swipe .scrollpage-inner {
   transition: .3s!important;
-}
-
-.btns {
-  /* z-index: 1; */
-  position: fixed;
-  bottom: 10px;
-  left: 10px;
-}
-
-.btns button {
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-
-  cursor: pointer;
-  outline: none;
-  border: 1px solid white;
-  border-right: none;
-
-  color: white;
-  background-color: transparent;
-}
-
-.btns button:hover {
-  background-color: white;
-  color: #f28482;
-  /* background-color: #fff; */
-}
-
-.btns button:first-child {
-  border-right: none;
-  border-radius: 5px 0 0 5px;
-}
-
-.btns button:last-child {
-  border-right: 1px solid white;
-  border-radius: 0 5px 5px 0;
 }
 
 </style>
