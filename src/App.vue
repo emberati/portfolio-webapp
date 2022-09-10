@@ -19,6 +19,10 @@ export default {
       // console.log(this.layout, this.layout.classList)
       this.layout.classList.toggle('landscape')
       this.scrollpage.redraw()
+    },
+    destroy() {
+      console.log('Destroying scrollpage component...')
+      this.scrollpage.destroy()
     }
   },
   mounted() {
@@ -47,6 +51,7 @@ export default {
     <button @click="scrollpage.backward">&lt;&lt;</button>
     <button @click="scrollpage.back">prev</button>
     <button @click="flip">flip</button>
+    <button @click="destroy">destroy</button>
     <button @click="scrollpage.next">next</button>
     <button @click="scrollpage.forward">&gt;&gt;</button>
   </div>
